@@ -1,11 +1,11 @@
-import footerLogo from "../Assets/Asset 20@4x.png";
+import footerLogo1 from "../Assets/Asset white 20@4x.png";
 import { listForFooter } from "../data";
 
 export default function Footer() {
   return (
     <footer className="app-Footer">
       <section className="footer-section">
-        <img src={footerLogo} alt="Footer Logo" />
+        <img src={footerLogo1} alt="Footer Logo" />
       </section>
       {listForFooter.map((section, index) => {
         return (
