@@ -6,13 +6,13 @@ import Nav from "./components/Nav";
 
 function App() {
   return (
-    <>
+    <div className="app-container">
       <Header>
         <Nav />
       </Header>
       <Main />
       <Footer />
-    </>
+    </div>
   );
 }
 

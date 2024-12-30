@@ -1,19 +1,40 @@
-/* Basic Reset */
-body {
-  width: 90%;
-  margin: auto;
-  padding: 0;
-  /* list-style: none; */
+
+.app-container {
+  /* width: 95%; */
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(50, 1fr);
+  gap: 10px;
+  /* Adds space between grid items */
+  /* height: 100vh; */
+  /* Ensure the grid has enough height */
 }
 
-ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
+.app-Header,
+.app-Main,
+.app-Footer {
+  border: 1px solid black;
+  /* Border to visualize grid sections */
+  padding: 10px;
+  /* width: 90%; */
+  /* margin: auto; */
+}
+
+
+/* All Header and Its realated Styles */
+.app-Header {
+  grid-column: 3 / 11;
+  grid-row: 1 / 3;
+  background-color: #f0f0f0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* Optional: Background color for Header */
 }
 
 .navbar-container {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   /* padding: 1rem 2rem; */
@@ -21,8 +42,9 @@ ul {
   color: #fff;
 }
 
-nav img {
-  max-width: 150px;
+ .navbar-container img {
+  max-width: 300px;
+  max-height: 82px;
   padding-left: 50px;
   text-decoration: none;
   font-size: 1.5rem;
@@ -31,9 +53,19 @@ nav img {
 }
 
 .navbar-links {
+  list-style: none;
   display: flex;
   gap: 1rem;
 }
+
+.navbar-item:nth-of-type(1) {
+  flex: 1;
+}
+
+.navbar-item:nth-of-type(2) {
+  flex: 2;
+}
+
 
 .navbar-links a {
   text-decoration: none;
@@ -59,28 +91,6 @@ nav img {
   height: 3px;
   background-color: #fff;
   margin: 5px 0;
-}
-
-footer {
-  width: 90%;
-  margin: auto;
-  display: flex;
-  justify-content:center;
-  gap: 2rem;
-}
-
-footer img{
-  width: 100px;
-  /* margin: 0 2rem ; */
-}
-
-footer ul{
-  list-style: none;
-}
-
-footer a{
-  text-decoration: none;
-  color: #000;
 }
 
 /* Responsive Design */
@@ -110,3 +120,68 @@ footer a{
     display: flex;
   }
 }
+
+
+/* All Main-Contents and Its realated Styles */
+
+.app-Main {
+  /* grid-column: 1 / end; */
+  grid-column: 3 / 11;
+  grid-row: 3 / 45;
+  background-color: #e0e0e0;
+  display: flex;
+  flex-direction: column;
+  /* Optional: Background color for Main */
+}
+
+.Hero-Section{
+ 
+}
+
+
+/* All Footer and Its realated Styles */
+.app-Footer {
+  /* grid-column: 1 / end; */
+  grid-column: 3 / 11;
+  grid-row: 45 / 50;
+  background-color: #d0d0d0;
+  /* width: 90%; */
+  /* margin: auto; */
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  /* Optional: Background color for Footer */
+}
+
+
+
+.footer-section img {
+ padding: 20px 0px;
+ max-width: 200px;
+ width: 40%;
+}
+
+.app-Footer a{
+  text-decoration: none;
+  color: #000;
+}
+
+ .footer-section {
+  min-width: 200px;
+  flex: 1 ;
+  /* margin: auto; */
+  /* text-align: center; */
+  text-decoration: none;
+ }
+
+ .footer-section ul {
+  list-style: none;
+ }
+
+ .footer-section:first-of-type {
+   margin: auto;
+   text-align: center;
+ }
+
+
