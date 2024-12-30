@@ -1,35 +1,29 @@
 
 .app-container {
-  /* width: 95%; */
+  max-width: 1440px;
+  margin: 0 auto ;
+  height: auto;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: repeat(50, 1fr);
-  gap: 10px;
-  /* Adds space between grid items */
-  /* height: 100vh; */
-  /* Ensure the grid has enough height */
+  grid-template-rows: auto;  /* Rows adjust to the content */
 }
 
 .app-Header,
 .app-Main,
 .app-Footer {
   border: 1px solid black;
-  /* Border to visualize grid sections */
   padding: 10px;
-  /* width: 90%; */
-  /* margin: auto; */
 }
 
 
 /* All Header and Its realated Styles */
 .app-Header {
   grid-column: 3 / 11;
-  grid-row: 1 / 3;
+  grid-row: 1;
   background-color: #f0f0f0;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  /* Optional: Background color for Header */
 }
 
 .navbar-container {
@@ -37,8 +31,6 @@
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  /* padding: 1rem 2rem; */
-  /* background-color: #333; */
   color: #fff;
 }
 
@@ -49,7 +41,6 @@
   text-decoration: none;
   font-size: 1.5rem;
   font-weight: bold;
-  /* color: #fff; */
 }
 
 .navbar-links {
@@ -119,41 +110,78 @@
   .navbar-toggle.active+.navbar-links {
     display: flex;
   }
+    .navbar-container img{
+      max-width: 100px;
+    }
+
+   .navbar-links {
+     display: none;
+        }
 }
 
 
 /* All Main-Contents and Its realated Styles */
 
 .app-Main {
-  /* grid-column: 1 / end; */
   grid-column: 3 / 11;
-  grid-row: 3 / 45;
+  grid-row: 2;
   background-color: #e0e0e0;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(8,1fr);
+  grid-template-rows: auto;
+  gap: 20px;
   /* Optional: Background color for Main */
 }
 
-.Hero-Section{
- 
+.Hero-section{
+    height: 100vh;
+    grid-column: span 8;
+    grid-row: 1;
+    background: #123456;
+    color: white;
+
 }
 
+.Highlights-section{
+  height: auto;
+  /* Content-driven height */
+  grid-column: span 8;
+  grid-row: 2;
+  padding: 50px 20px;
+  background: #f9f9f9;
+  /* Alternate background colors for distinction */
+}
+
+.Testimonials-section{
+  height: auto;
+  grid-column: span 8;
+   /* Content-driven height */
+  grid-row: 3;
+  padding: 50px 20px;
+  background: #f9f9f9;
+  /* Alternate background colors for distinction */
+}
+
+.About-section{
+  height: auto;
+  grid-column: span 8;
+  grid-row: 4;
+  /* Content-driven height */
+  padding: 50px 20px;
+  background: #f9f9f9;
+  /* Alternate background colors for distinction */
+}
 
 /* All Footer and Its realated Styles */
 .app-Footer {
-  /* grid-column: 1 / end; */
   grid-column: 3 / 11;
-  grid-row: 45 / 50;
+  grid-row: 3;
   background-color: #d0d0d0;
-  /* width: 90%; */
-  /* margin: auto; */
   display: flex;
   justify-content: center;
   gap: 2rem;
   flex-wrap: wrap;
-  /* Optional: Background color for Footer */
 }
-
 
 
 .footer-section img {
@@ -170,8 +198,6 @@
  .footer-section {
   min-width: 200px;
   flex: 1 ;
-  /* margin: auto; */
-  /* text-align: center; */
   text-decoration: none;
  }
 

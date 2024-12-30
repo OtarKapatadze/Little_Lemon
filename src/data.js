@@ -35,7 +35,7 @@ const listForFooter = [
 const listForMain = [
   {
     id:1,
-    className: "Hero-Section",
+    className: "Hero-section",
     listItems: ["Hero-Section"]
   },
   {
