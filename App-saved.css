@@ -1,39 +1,64 @@
-/* Basic Reset */
-body {
- width: 90%;
- margin: auto;
- padding: 0;
- /* list-style: none; */
+.app-container {
+ max-width: 1440px;
+ margin: 0 auto;
+ height: auto;
+ display: grid;
+ gap: 10px;
+ grid-template-columns: repeat(12, 1fr);
+ grid-template-rows: auto;
+ /* Rows adjust to the content */
 }
 
-ul {
- margin: 0;
- padding: 0;
- list-style: none;
+
+.app-Header,
+.app-Main,
+.app-Footer {
+ border: 1px solid black;
+ padding: 10px;
+}
+
+
+/* All Header and Its realated Styles */
+.app-Header {
+ grid-column: 3 / 11;
+ grid-row: 1;
+ background-color: #f0f0f0;
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
 }
 
 .navbar-container {
  display: flex;
+ flex-wrap: wrap;
  justify-content: space-between;
  align-items: center;
- /* padding: 1rem 2rem; */
- /* background-color: #333; */
  color: #fff;
 }
 
-nav img {
- max-width: 150px;
+.navbar-container img {
+ max-width: 300px;
+ max-height: 82px;
  padding-left: 50px;
  text-decoration: none;
  font-size: 1.5rem;
  font-weight: bold;
- /* color: #fff; */
 }
 
 .navbar-links {
+ list-style: none;
  display: flex;
  gap: 1rem;
 }
+
+.navbar-item:nth-of-type(1) {
+ flex: 1;
+}
+
+.navbar-item:nth-of-type(2) {
+ flex: 2;
+}
+
 
 .navbar-links a {
  text-decoration: none;
@@ -61,28 +86,6 @@ nav img {
  margin: 5px 0;
 }
 
-footer {
- width: 90%;
- margin: auto;
- display: flex;
- justify-content: center;
- gap: 2rem;
-}
-
-footer img {
- width: 100px;
- /* margin: 0 2rem ; */
-}
-
-footer ul {
- list-style: none;
-}
-
-footer a {
- text-decoration: none;
- color: #000;
-}
-
 /* Responsive Design */
 @media (max-width: 768px) {
  .navbar-links {
@@ -108,5 +111,144 @@ footer a {
 
  .navbar-toggle.active+.navbar-links {
   display: flex;
+ }
+
+ .navbar-container img {
+  max-width: 100px;
+ }
+
+
+}
+
+/* All Main-Contents and Its realated Styles */
+
+.app-Main {
+ grid-column: 3 / 11;
+ grid-row: 2;
+ background-color: #e0e0e0;
+ display: grid;
+ grid-template-columns: repeat(8, 1fr);
+ grid-template-rows: auto;
+ gap: 20px;
+ /* Optional: Background color for Main */
+}
+
+.Hero-section {
+ height: 100vh;
+ grid-column: span 8;
+ grid-row: 1;
+ background: #123456;
+ color: white;
+
+}
+
+.Highlights-section {
+ height: auto;
+ /* Content-driven height */
+ grid-column: span 8;
+ grid-row: 2;
+ padding: 50px 20px;
+ background: #f9f9f9;
+ /* Alternate background colors for distinction */
+}
+
+.Testimonials-section {
+ height: auto;
+ grid-column: span 8;
+ /* Content-driven height */
+ grid-row: 3;
+ padding: 50px 20px;
+ background: #f9f9f9;
+ /* Alternate background colors for distinction */
+}
+
+.About-section {
+ height: auto;
+ grid-column: span 8;
+ grid-row: 4;
+ /* Content-driven height */
+ padding: 50px 20px;
+ background: #f9f9f9;
+ /* Alternate background colors for distinction */
+}
+
+/* All Footer and Its realated Styles */
+.app-Footer {
+ grid-column: 3 / 11;
+ grid-row: 3;
+ background-color: #d0d0d0;
+ display: flex;
+ justify-content: center;
+ gap: 2rem;
+ flex-wrap: wrap;
+}
+
+
+.footer-section img {
+ padding: 20px 0px;
+ max-width: 200px;
+ width: 40%;
+}
+
+.app-Footer a {
+ text-decoration: none;
+ color: #000;
+}
+
+.footer-section {
+ min-width: 200px;
+ flex: 1;
+ text-decoration: none;
+}
+
+.footer-section ul {
+ list-style: none;
+}
+
+.footer-section:first-of-type {
+ margin: auto;
+ text-align: center;
+}
+
+
+
+
+/* For medium screens: 8 columns */
+@media screen and (max-width: 1024px) {
+ .app-container {
+  grid-template-columns: repeat(8, 1fr);
+  /* Switch to 8 columns */
+ }
+
+ .app-Header,
+ .app-Main,
+ .Hero-section,
+ .Highlights-section,
+ .Testimonials-section,
+ .About-section,
+ .app-Footer {
+  grid-column: span 8;
+ }
+}
+
+/* For small screens: 4 columns */
+@media screen and (max-width: 768px) {
+ .app-container {
+  grid-template-columns: repeat(4, 1fr);
+  /* Switch to 4 columns */
+ }
+
+ .app-Main {
+  grid-column: span 4;
+  grid-template-columns: repeat(4, 1fr)
+ }
+
+ .app-Header,
+ .Hero-section,
+ .Highlights-section,
+ .Testimonials-section,
+ .About-section,
+ .app-Footer {
+  grid-column: span 4;
  }
 }

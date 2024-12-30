@@ -1,12 +1,14 @@
-
 .app-container {
   max-width: 1440px;
-  margin: 0 auto ;
+  margin: 0 auto;
   height: auto;
   display: grid;
+  gap: 10px;
   grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: auto;  /* Rows adjust to the content */
+  grid-template-rows: auto;
+  /* Rows adjust to the content */
 }
+
 
 .app-Header,
 .app-Main,
@@ -34,7 +36,7 @@
   color: #fff;
 }
 
- .navbar-container img {
+.navbar-container img {
   max-width: 300px;
   max-height: 82px;
   padding-left: 50px;
@@ -114,11 +116,8 @@
       max-width: 100px;
     }
 
-   .navbar-links {
-     display: none;
-        }
-}
 
+ }
 
 /* All Main-Contents and Its realated Styles */
 
@@ -127,22 +126,22 @@
   grid-row: 2;
   background-color: #e0e0e0;
   display: grid;
-  grid-template-columns: repeat(8,1fr);
+  grid-template-columns: repeat(8, 1fr);
   grid-template-rows: auto;
   gap: 20px;
   /* Optional: Background color for Main */
 }
 
-.Hero-section{
-    height: 100vh;
-    grid-column: span 8;
-    grid-row: 1;
-    background: #123456;
-    color: white;
+.Hero-section {
+  height: 100vh;
+  grid-column: span 8;
+  grid-row: 1;
+  background: #123456;
+  color: white;
 
 }
 
-.Highlights-section{
+.Highlights-section {
   height: auto;
   /* Content-driven height */
   grid-column: span 8;
@@ -152,17 +151,17 @@
   /* Alternate background colors for distinction */
 }
 
-.Testimonials-section{
+.Testimonials-section {
   height: auto;
   grid-column: span 8;
-   /* Content-driven height */
+  /* Content-driven height */
   grid-row: 3;
   padding: 50px 20px;
   background: #f9f9f9;
   /* Alternate background colors for distinction */
 }
 
-.About-section{
+.About-section {
   height: auto;
   grid-column: span 8;
   grid-row: 4;
@@ -185,29 +184,68 @@
 
 
 .footer-section img {
- padding: 20px 0px;
- max-width: 200px;
- width: 40%;
+  padding: 20px 0px;
+  max-width: 200px;
+  width: 40%;
 }
 
-.app-Footer a{
+.app-Footer a {
   text-decoration: none;
   color: #000;
 }
 
- .footer-section {
+.footer-section {
   min-width: 200px;
-  flex: 1 ;
+  flex: 1;
   text-decoration: none;
- }
+}
 
- .footer-section ul {
+.footer-section ul {
   list-style: none;
- }
+}
 
- .footer-section:first-of-type {
-   margin: auto;
-   text-align: center;
- }
+.footer-section:first-of-type {
+  margin: auto;
+  text-align: center;
+}
 
 
+
+
+/* For medium screens: 8 columns */
+@media screen and (max-width: 1024px) {
+  .app-container {
+    grid-template-columns: repeat(8, 1fr);
+    /* Switch to 8 columns */
+  }
+  .app-Header,
+  .app-Main,
+  .Hero-section,
+  .Highlights-section,
+  .Testimonials-section,
+  .About-section,
+  .app-Footer {
+    grid-column: span 8;
+  }
+}
+
+/* For small screens: 4 columns */
+@media screen and (max-width: 768px) {
+  .app-container {
+    grid-template-columns: repeat(4, 1fr);
+    /* Switch to 4 columns */
+  }
+    .app-Main {
+    grid-column: span 4;
+    grid-template-columns: repeat(4, 1fr)
+    }
+
+    .app-Header,
+    .Hero-section,
+    .Highlights-section,
+    .Testimonials-section,
+    .About-section,
+    .app-Footer {
+      grid-column: span 4;
+    }
+  }
