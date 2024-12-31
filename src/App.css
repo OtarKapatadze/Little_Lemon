@@ -1,9 +1,97 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
 body {
   box-sizing: border-box;
   margin: auto;
   line-height: 1.5;
-  font-size: 15px;
-  /* background-image: linear-gradient(to right top, #495e57, #486e6c, #457e86, #478da4, #579ac3, #5da6d4, #63b3e6, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1); */
+  font-size: 18px;
 }
 
 .app-container {
@@ -31,29 +119,35 @@ body {
 
 .navbar-container {
   display: flex;
-  /* justify-content:space-evenly; */
   align-items: center;
 }
 
-.navbar-container img {
-  max-width: 317px;
+.navbar-container > img {
+  max-width: 200px;
   max-height: 56px;
+  padding-left: 5px;
+  flex-shrink: 1;
   object-fit: contain;
 }
 
-.navbar-container img:hover{
+.navbar-container > img:hover{
   filter: drop-shadow(5px 9px 11px #495E57);
   cursor: pointer;
-  transition: 0.3s linear;
+  /* transition: 0.3s linear; */
 }
 
+
+/* when it is in open state */
 .navbar-links {
-  /* align-self: flex-end; */
   list-style: none;
   display: flex;
   justify-content: end;
-  flex: 1 1;
 }
+
+/* .navbar-links button img {
+ max-width: 100px;
+ color: #000000;
+} */
 
 .navbar-item:nth-of-type(1) {
   flex: 1;
@@ -63,14 +157,13 @@ body {
   flex: 2;
 }
 
-
 .navbar-links a {
   text-decoration: none;
   flex: 1 1;
   color: #495E57;
   font-family: Karla, sans-serif;
   font-weight: 600;
-  padding: 0.5rem 1rem;
+  padding: 0.3rem 0.6rem;
   border-radius: 5px;
   text-transform: uppercase;
 }
@@ -96,36 +189,55 @@ body {
   margin: 5px 0;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-  .navbar-links {
-    display: none;
-    flex-direction: column;
-    gap: 0;
-    background-color: #333;
-    position: absolute;
-    top: 100%;
-    right: 0;
-    width: 200px;
-    text-align: right;
+
+/* Styles for hamburger */
+
+.hamburger{
+ margin-left: auto;
+ font-size: 2rem;
+ background: none;
+ border: none;
+ cursor: pointer;
+}
+
+.hamburger img {
+  max-width: 25px;
+  color: #495E57;
+}
+
+/* Hamburger menu fucnctionality */
+@media screen and (max-width: 1023px) {
+  .navbar-container {
+      position: relative;
+    }
+    .menu {
+      position: absolute;
+      transform: scaleY(0);
+      transform-origin: top;
+      opacity: 0;
+      display: flex;
+      flex-direction: column;
+      background-color: #e0e0e0;
+      width: 100%;
+      top: 145%;
+      text-align: center;
+      letter-spacing: 0.2rem;
+      font-size: 10rem;
+      transition: transform 0.5s ease, opacity 0.5s ease;
+    }
+
+    .menu.open {
+      transform: scaleY(1);
+      opacity: 1;
+      /* padding: 1em; */
+    }
+
+    .menu a{
+      font-size: 1.2rem;
+      /* border-bottom: 1px solid black; */
+    }
   }
 
-  .navbar-links a {
-    padding: 1rem;
-    border-bottom: 1px solid #555;
-  }
-
-  .navbar-toggle {
-    display: block;
-  }
-
-  .navbar-toggle.active+.navbar-links {
-    display: flex;
-  }
-
-
-
- }
 
 /* All Main-Contents and Its realated Styles */
 
@@ -191,6 +303,8 @@ body {
   justify-content: center;
   gap: 2rem;
   flex-wrap: wrap;
+  padding-bottom: 100px;
+  padding-top: 30px;
 }
 
 
@@ -205,6 +319,8 @@ body {
 .app-Footer a {
   text-decoration: none;
   color: white;
+  gap: 20px;
+  margin-left: 20px;
 }
 
 .app-Footer a:hover{
@@ -218,6 +334,9 @@ body {
   min-width: 200px;
   flex: 1;
   text-decoration: none;
+  padding-left: 10px;
+  padding-top: 10px;
+  /* padding-bottom: 20px; */
 }
 
 .footer-section ul {
@@ -230,10 +349,21 @@ body {
 }
 
 
+/* For medium screens: 8 columns */
+@media screen and (max-width: 1200px) {
+
+  .navbar-links {
+    gap: 1rem;
+    /* display: none; */
+    font-size: 0.9rem;
+    font-weight: 800;
+    line-height: 1;
+  }
+}
 
 
 /* For medium screens: 8 columns */
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1023px) {
   .app-container {
     grid-template-columns: repeat(8, 1fr);
     /* Switch to 8 columns */
@@ -249,8 +379,9 @@ body {
   }
    .navbar-links {
      gap: 1rem;
+     /* display: none; */
    }
-}
+  }
 
 /* For small screens: 4 columns */
 @media screen and (max-width: 768px) {
@@ -272,3 +403,13 @@ body {
       grid-column: span 4;
     }
   }
+
+
+
+
+
+
+
+
+
+
