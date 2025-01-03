@@ -1,4 +1,5 @@
 import { listForMain } from "../data";
+import Homepage from "./Homepage ";
 
 export default function Main({ children }) {
   return (

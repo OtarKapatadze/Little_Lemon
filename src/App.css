@@ -114,8 +114,9 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-
 }
+
+
 
 .navbar-container {
   display: flex;
@@ -329,6 +330,11 @@ body {
   filter: drop-shadow(5px 9px 11px #000000);
 }
 
+.app-Footer a:active {
+  color: #b8f414;
+  text-shadow: 6px 0px 26px rgba(228, 221, 185, 0.6);
+  filter: drop-shadow(5px 9px 11px #279927);
+}
 
 .footer-section {
   min-width: 200px;

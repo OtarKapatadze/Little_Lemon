@@ -42,7 +42,7 @@ export default function Nav() {
     </ul>
   );
 
-  const humburgerMenu = (
+  const hamburgerMenu = (
     <>
       <button className="hamburger" onClick={toggleMenu}>
         <img src={menuOpen ? xmark : hamburgerSvg} alt="Hamburger Menu Icon" />
@@ -71,7 +71,7 @@ export default function Nav() {
   return (
     <nav className="navbar-container">
       <img className="navbar-item" src={logo} alt="Company Logo" />
-      {windowWidth >= 1024 ? navbarItems : humburgerMenu}
+      {windowWidth >= 1024 ? navbarItems : hamburgerMenu}
     </nav>
   );
 }
