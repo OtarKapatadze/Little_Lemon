@@ -7,6 +7,8 @@ import demnaImg from './Assets/Demna.webp';
 import janeImg from './Assets/Jane.webp';
 import georginaImg from './Assets/Georgina.webp';
 import billImg from './Assets/Bill.webp';
+import ownersA from './Assets/Owners A.jpg'
+import ownersB from './Assets/Owners B.jpg'
 
 const listForFooter = [
   {
@@ -135,9 +137,15 @@ const testimonialsData = [
    rating: 5,
    description:"Little Lemon is my go to restaurant with my family during important occassions although it can get pretty busy",
   }
-]
+];
+
+const chicagoData = {
+  title: 'Our Story',
+  image1: ownersA,
+  image2: ownersB,
+  description: "Little Lemon is owned by two Italian brothers, Mario and Adrian, who moved to the United States to pursue their shared dream of owning a restaurant. To craft the menu, Mario relies on family recipes and his experience as a chef in Italy. Adrian does all the marketing for the restaurant and led the effort to expand the menu beyond classic Italian to incorporate additional cuisines from the Mediterranean region"
+}
 
 
 
-
-export {listForFooter,listForMain, homePageInfo,SpeacialsData,testimonialsData}; // Default export
+export {listForFooter,listForMain, homePageInfo,SpeacialsData,testimonialsData,chicagoData}; // Default export
