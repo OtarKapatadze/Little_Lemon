@@ -2,7 +2,7 @@ import { chicagoData } from "../data";
 
 export default function Chicago() {
   return (
-    <section className="About-section">
+    <section className="about-container">
       <article className="story-container">
         <h2>{chicagoData.title}</h2>
         <p>{chicagoData.description}</p>

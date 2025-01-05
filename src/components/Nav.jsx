@@ -4,7 +4,14 @@ import xmark from "../Assets/closeX.svg";
 // import xmark from "../Assets/Xicon.png";
 
 import { useState, useEffect } from "react";
-const listItems = ["Home", "About", "Services", "Contact", "Login"];
+const listItems = [
+  "Home",
+  "About",
+  "Menu",
+  "Reservation",
+  "Order Online",
+  "Login",
+];
 
 export default function Nav() {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
@@ -27,7 +34,7 @@ export default function Nav() {
     <ul className="navbar-links navbar-item">
       {listItems.map((el, index) => {
         return (
-          <li className={`list-Item-${index + 1}`} key={index}>
+          <li className={`list-item-${index + 1}`} key={index}>
             <a
               href="#"
               onClick={(e) => {

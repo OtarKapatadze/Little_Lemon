@@ -2,7 +2,7 @@ import { testimonialsData } from "../data";
 
 export default function CustomerSay() {
   return (
-    <section className="Testimonials-section">
+    <section className="testimonials-container">
       <header className="testimonials-header">
         <h2>Testimonials</h2>
       </header>

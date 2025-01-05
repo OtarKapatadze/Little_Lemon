@@ -47,23 +47,23 @@ const listForFooter = [
 const listForMain = [
   {
     id:1,
-    className: "Hero-section",
-    listItems: ["Hero-Section"]
+    className: "hero-container",
+    listItems: ["Hero-contents"]
   },
   {
     id:2,
-    className:"Highlights-section",
-    listItems:["Highlights-section"]
+    className:"specials-container",
+    listItems:["Specials-contents"]
   },
   {
     id:3,
-    className:"Testimonials-section",
-    listItems:["Testimonials-section"]
+    className:"testimonials-container",
+    listItems:["Testimonials-content"]
   },
   {
     id:4,
-    className:"About-section",
-    listItems:["About-section"]
+    className:"about-container",
+    listItems:["About-content"]
   }
 ];
 
@@ -74,7 +74,7 @@ const homePageInfo = {
   location: "Chicago",
   description: "We are a family owned Mediterranean restaurant, focused on traditional recipes served with a modern twist",
   buttonLabel: "Reserve a table",
-  classname: 'Hero-section'
+  classname: 'hero-container'
 };
 
 const SpeacialsData = [

@@ -1,98 +1,10 @@
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-output,
-ruby,
-section,
-summary,
-time,
-mark,
-audio,
-video {
- margin: 0;
- padding: 0;
- border: 0;
- font-size: 100%;
- font: inherit;
- vertical-align: baseline;
-}
-
 body {
  box-sizing: border-box;
  margin: auto;
  line-height: 1.5;
  font-size: 18px;
 }
+
 
 .app-container {
  max-width: 1440px;
@@ -102,12 +14,11 @@ body {
  grid-template-columns: repeat(12, 1fr);
  grid-template-rows: auto;
  position: relative;
- /* Rows adjust to the content */
 }
 
 
 /* All Header and Its realated Styles */
-.app-Header {
+.app-header {
  grid-column: 3 / 11;
  grid-row: 1;
  height: 100px;
@@ -134,10 +45,8 @@ body {
 .navbar-container>img:hover {
  filter: drop-shadow(5px 9px 11px #495E57);
  cursor: pointer;
- /* transition: 0.3s linear; */
 }
 
-/* when it is in open state */
 .navbar-links {
  list-style: none;
  display: flex;
@@ -227,12 +136,10 @@ body {
  .menu.open {
   transform: scaleY(1);
   opacity: 1;
-  /* padding: 1em; */
  }
 
  .menu a {
   font-size: 1.2rem;
-  /* border-bottom: 1px solid black; */
  }
 }
 
@@ -242,13 +149,10 @@ body {
 .app-Main {
  grid-column: span 12;
  grid-row: 2;
- /* background-color: #e0e0e0; */
  display: grid;
  grid-template-columns: repeat(12, 1fr);
  grid-template-rows: auto;
- /* gap: 20px; */
  position: relative;
- /* Optional: Background color for Main */
 }
 
 /* .app-container::before {
@@ -279,7 +183,6 @@ body {
  grid-row: 1;
  background-color: #495E57;
  color: white;
- /* z-index: 1; */
  position: relative;
  display: flex;
 }
@@ -305,58 +208,37 @@ body {
  object-fit: cover;
 }
 
-.Hero-section::before{
-content: "";
-grid-column: span 12;
-grid-row: 1;
-position: absolute;
-background-color: #495E57;
-z-index: -1;
-width: 100%;
-height: 100%;
-}
-
 
 .Highlights-section {
  height: auto;
- /* grid-column: span 8; */
  grid-column: 3/11;
  grid-row: 2;
  padding: 50px 20px;
  background: #f9f9f9;
- /* Alternate background colors for distinction */
 }
 
 
 
 .Testimonials-section {
  height: auto;
- /* grid-column: span 8; */
  grid-column: 3/11;
- /* Content-driven height */
  grid-row: 3;
  padding: 50px 20px;
- /* background: #f9f9f9; */
  background: #495E57;
- /* Alternate background colors for distinction */
 }
 
 .About-section {
  height: auto;
- /* grid-column: span 8; */
  grid-column: 3/11;
  grid-row: 4;
- /* Content-driven height */
  padding: 50px 20px;
  background: #f9f9f9;
- /* Alternate background colors for distinction */
 }
 
 /* All Footer and Its realated Styles */
 .app-Footer {
  grid-column: 3 / 11;
  grid-row: 3;
- /* background-color: #d0d0d0; */
  color: white;
  background: #495E57;
  display: flex;
@@ -401,7 +283,6 @@ height: 100%;
  text-decoration: none;
  padding-left: 10px;
  padding-top: 10px;
- /* padding-bottom: 20px; */
 }
 
 .footer-section ul {
@@ -419,7 +300,6 @@ height: 100%;
 
  .navbar-links {
   gap: 1rem;
-  /* display: none; */
   font-size: 0.9rem;
   font-weight: 800;
   line-height: 1;
@@ -427,11 +307,9 @@ height: 100%;
 }
 
 
-/* For medium screens: 8 columns */
 @media screen and (max-width: 1023px) {
  .app-container {
   grid-template-columns: repeat(8, 1fr);
-  /* Switch to 8 columns */
  }
 
  .app-Header,
@@ -446,15 +324,12 @@ height: 100%;
 
  .navbar-links {
   gap: 1rem;
-  /* display: none; */
  }
 }
 
-/* For small screens: 4 columns */
 @media screen and (max-width: 768px) {
  .app-container {
   grid-template-columns: repeat(4, 1fr);
-  /* Switch to 4 columns */
  }
 
  .app-Main {
