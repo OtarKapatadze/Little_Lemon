@@ -14,7 +14,7 @@ export default function Main({ children }) {
       <div className="customersay-main-container">
         <CustomerSay />
       </div>
-      {/* <Chicago /> */}
+      <Chicago />
       {children}
     </main>
   );

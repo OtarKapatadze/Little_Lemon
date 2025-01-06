@@ -16,7 +16,7 @@ export default function CustomerSay() {
                 <p>⭐⭐⭐⭐⭐</p>
                 <p>{`${el.rating}/5`}</p>
               </div>
-              <p>{el.description}</p>
+              <p>"{el.description}"</p>
             </div>
           );
         })}
