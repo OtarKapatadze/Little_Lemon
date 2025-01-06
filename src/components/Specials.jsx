@@ -10,7 +10,7 @@ export default function Specials() {
       <main className="specials-main">
         {SpeacialsData.map((el) => {
           return (
-            <div key={el.id} className="dish-card">
+            <div key={el.id} className="specials-card">
               <img src={el.image} alt={el.title} />
               <div className="dish-card-title">
                 <h3>{el.title}</h3>

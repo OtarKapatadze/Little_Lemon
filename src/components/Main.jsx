@@ -10,10 +10,10 @@ export default function Main({ children }) {
       <div className="homepage-main-container">
         <Homepage />
       </div>
-      {/* <Specials /> */}
-      {/* <div className="customersay-main-container"> */}
-      {/* <CustomerSay /> */}
-      {/* </div> */}
+      <Specials />
+      <div className="customersay-main-container">
+        <CustomerSay />
+      </div>
       {/* <Chicago /> */}
       {children}
     </main>
