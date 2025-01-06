@@ -78,7 +78,7 @@ export default function Nav() {
   return (
     <nav className="navbar-container">
       <img className="navbar-item" src={logo} alt="Company Logo" />
-      {windowWidth >= 1024 ? navbarItems : hamburgerMenu}
+      {windowWidth >= 1025 ? navbarItems : hamburgerMenu}
     </nav>
   );
 }

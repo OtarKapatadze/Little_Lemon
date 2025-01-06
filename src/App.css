@@ -171,6 +171,7 @@ button:hover{
 .navbar-links a {
   text-decoration: none;
   flex: 1 1;
+  border: 0.1px solid #495E57;
   color: #495E57;
   font-family: Karla, sans-serif;
   font-weight: 600;
@@ -339,6 +340,7 @@ button:hover{
   font-size: 1.1rem;
   white-space: nowrap;
   padding: 0rem 2rem;
+  margin: 0rem 1rem;
   font-weight: 900;
 }
 
@@ -354,6 +356,8 @@ button:hover{
   background-color: #f4ce14;
   color: white;
 }
+
+/* .specials-header button:fo */
 
 
 .specials-main {
@@ -597,12 +601,17 @@ button:hover{
   bottom: 10%;
   right: 10%;
 }
+@media screen and (max-width: 1260px){
+  .navbar-links a{
+    font-size: 0.67rem;
 
+  }
+}
 
 
 
 /* For medium screens: 8 columns */
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 1024px) {
 
   .navbar-container {
     width: 100%;
@@ -698,6 +707,8 @@ button:hover{
    right: 0;
  }
 
+
+
 }
 
 
@@ -778,4 +789,13 @@ button:hover{
   .testimonials-header h2 {
     font-size: 2rem;
   }
+
+  .story-container h2 {
+    font-size: 2.2rem;
+  }
+
+  .story-container p{
+   font-size: 1.2rem;
+   font-weight: 500;
+ }
 }
