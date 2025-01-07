@@ -1,14 +1,5 @@
 import footerLogo1 from "../Assets/Asset white 20@4x.png";
-import { listForFooter } from "../data";
-
-// // Footer  icons
-// import twitterIcon from "../Assets/X-twitter.png";
-// import facebookIcon from "../Assets/Facebook.png";
-// import instagramIcon from "../Assets/Instagram.png";
-// import youtubeIcon from "../Assets/Youtube.png";
-// import emailIcon from "../Assets/email.png";
-// import phoneIcon from "../Assets/phone.png";
-// import pinIcon from "../Assets/pin.png";
+import { listForFooter, iconsForFooter } from "../data";
 
 export default function Footer() {
   return (

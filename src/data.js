@@ -19,6 +19,7 @@ import youtubeIcon from './Assets/Youtube.png';
 import emailIcon from './Assets/email.png';
 import phoneIcon from './Assets/phone.png';
 import pinIcon from './Assets/pin.png';
+import copyIcon from './Assets/copyright.png';
 
 const listForFooter = [
   {
@@ -40,6 +41,7 @@ const listForFooter = [
       " 123 Fake Ave, Chicago, IL 60602",
       " +1 (012) 345-6789",
       " info@littlelemon.com",
+      "Little Lemon By OTAR_2025"
     ],
   },
   {
@@ -49,6 +51,7 @@ const listForFooter = [
       "facebook",
       "twitter",
       "instagram",
+      "youtube",
     ],
   },
 ];
@@ -56,13 +59,14 @@ const listForFooter = [
   const iconsForFooter = [
   {facebook: facebookIcon},
   {twitter: twitterIcon},
+  {instagram: instagramIcon},
+  {youtube: youtubeIcon},
+  {address:pinIcon},
   {phone: phoneIcon},
   {email: emailIcon},
-  {address:pinIcon},
-  {instagram: instagramIcon},
-  {youtube: youtubeIcon}
+  {copyrights: copyIcon},
   ];
-
+  
 
 const listForMain = [
   {
