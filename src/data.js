@@ -37,21 +37,35 @@ const listForFooter = [
   {
     id: 2,
     listItems: [
-      "CONTACT US",
-      " 123 Fake Ave, Chicago, IL 60602",
-      " +1 (012) 345-6789",
-      " info@littlelemon.com",
-      "Little Lemon By OTAR_2025"
+      {
+        title: "CONTACT US"
+      },
+      {
+       icon : pinIcon,
+       content:" 123 Fake Ave, Chicago, IL 60602"
+      },
+      {
+        icon: phoneIcon,
+        content: " +1 (012) 345-6789"
+      },
+      {
+        icon: emailIcon,
+        content: " info@littlelemon.com"
+      },
+      {
+        icon: copyIcon,
+        content:"Little Lemon By OTAR_2025"
+      },
     ],
   },
   {
     id: 3,
     listItems: [
-      "FIND US IN SOCIAL MEDIA",
-      "facebook",
-      "twitter",
-      "instagram",
-      "youtube",
+      {title: "FIND US IN SOCIAL MEDIA"},
+      {icon:facebookIcon},
+      {icon:twitterIcon},
+      {icon:instagramIcon},
+      {icon:youtubeIcon},
     ],
   },
 ];
@@ -66,7 +80,7 @@ const listForFooter = [
   {email: emailIcon},
   {copyrights: copyIcon},
   ];
-  
+
 
 const listForMain = [
   {
@@ -181,3 +195,55 @@ export {
   chicagoData,
   iconsForFooter
   }; // Default export
+
+
+
+
+
+  
+// const listForFooter = [
+//   {
+//     id: 1,
+//     listItems: [
+//       "SITEMAP",
+//       "Home",
+//       "About",
+//       "Menu",
+//       "Reservation",
+//       "Order Online",
+//       "Login",
+//     ],
+//   },
+//   {
+//     id: 2,
+//     listItems: [
+//       "CONTACT US",
+//       " 123 Fake Ave, Chicago, IL 60602",
+//       " +1 (012) 345-6789",
+//       " info@littlelemon.com",
+//       "Little Lemon By OTAR_2025"
+//     ],
+//   },
+//   {
+//     id: 3,
+//     listItems: [
+//       "FIND US IN SOCIAL MEDIA",
+//       "facebook",
+//       "twitter",
+//       "instagram",
+//       "youtube",
+//     ],
+//   },
+// ];
+
+//   const iconsForFooter = [
+//   {facebook: facebookIcon},
+//   {twitter: twitterIcon},
+//   {instagram: instagramIcon},
+//   {youtube: youtubeIcon},
+//   {address:pinIcon},
+//   {phone: phoneIcon},
+//   {email: emailIcon},
+//   {copyrights: copyIcon},
+//   ];
+  
