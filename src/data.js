@@ -10,11 +10,21 @@ import billImg from './Assets/Bill.webp';
 import ownersA from './Assets/Owners A.jpg'
 import ownersB from './Assets/Owners B.jpg'
 
+// Footer  icons
+
+import twitterIcon from './Assets/X-twitter.png';
+import facebookIcon from './Assets/Facebook.png';
+import instagramIcon from './Assets/Instagram.png';
+import youtubeIcon from './Assets/Youtube.png';
+import emailIcon from './Assets/email.png';
+import phoneIcon from './Assets/phone.png';
+import pinIcon from './Assets/pin.png';
+
 const listForFooter = [
   {
     id: 1,
     listItems: [
-      "Doormat Navigation",
+      "SITEMAP",
       "Home",
       "About",
       "Menu",
@@ -26,22 +36,32 @@ const listForFooter = [
   {
     id: 2,
     listItems: [
-      "Contact",
-      "Address",
-      "Phone number",
-      "Email",
+      "CONTACT US",
+      " 123 Fake Ave, Chicago, IL 60602",
+      " +1 (012) 345-6789",
+      " info@littlelemon.com",
     ],
   },
   {
     id: 3,
     listItems: [
-      "Social Media Links",
-      "Facebook",
-      "Twitter",
-      "Instagram",
+      "FIND US IN SOCIAL MEDIA",
+      "facebook",
+      "twitter",
+      "instagram",
     ],
   },
 ];
+
+  const iconsForFooter = [
+  {facebook: facebookIcon},
+  {twitter: twitterIcon},
+  {phone: phoneIcon},
+  {email: emailIcon},
+  {address:pinIcon},
+  {instagram: instagramIcon},
+  {youtube: youtubeIcon}
+  ];
 
 
 const listForMain = [
@@ -148,4 +168,12 @@ const chicagoData = {
 
 
 
-export {listForFooter,listForMain, homePageInfo,SpeacialsData,testimonialsData,chicagoData}; // Default export
+export {
+  listForFooter,
+  listForMain,
+  homePageInfo,
+  SpeacialsData,
+  testimonialsData,
+  chicagoData,
+  iconsForFooter
+  }; // Default export
