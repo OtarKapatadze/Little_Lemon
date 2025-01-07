@@ -172,22 +172,34 @@ button:hover{
   text-decoration: none;
   flex: 1 1;
   border: 0.1px solid #495E57;
-  color: #495E57;
+  /* to try */
+  background-color: #495e57;
+  color:white;
   font-family: Karla, sans-serif;
   font-weight: 600;
   padding: 0.3rem 0.4rem;
   border-radius: 5px;
   white-space: nowrap;
-  transition: background-color 0.5s ease;
+  transition: background-color 0.2s ease;
 }
 
 
 
 .navbar-links a:hover {
-  background-color: #495E57;
-  color: #f4ce14;
-  transition: 0.3s linear;
+  background-color:white;
+  color:#495E57;
+  /* box-shadow: 0px 0px 39px -8px rgb(244, 206, 20); */
+  /* box-shadow: inset 0px 0px 39px -8px rgb(244, 206, 20); */
+  box-shadow: inset 0px 0px 17px -8px rgb(244, 206, 20);
+  box-shadow: 0px 0px 17px -8px rgb(244, 206, 20);
+  /* transform: translateX(5px); */
+  /* transition: 0.3s linear; */
   /* padding: 0.3rem 3rem; */
+}
+
+.navbar-links a:active {
+  background-color: #f4ce14;
+  color:#ffffff;
 }
 
 .navbar-toggle {
@@ -219,6 +231,7 @@ button:hover{
 
 .hamburger img {
   max-width: 30px;
+  min-height: 30px;
   color: #495E57;
 }
 
@@ -426,7 +439,7 @@ button:hover{
 .specials-card>p {
   margin: 2rem 0rem 1rem 0rem;
   padding: 0rem 1rem;
-  height: 12rem;
+  /* height: 12rem; */
   min-width: 200px;
 }
 
@@ -480,6 +493,7 @@ button:hover{
 .testimonials-header h2 {
   font-family: Papyrus, Markazi, sans-serif;
   font-weight: 900;
+  /* color: #f1f1f1; */
   /* text-shadow: 4px 8px 7px rgba(224, 224, 224, 0.2); */
 }
 
@@ -762,7 +776,7 @@ border: 2px solid #495E57;
     top: 100%;
     text-align: center;
     font-size: 1.5rem;
-    transition: transform 1s ease, opacity 0.5s ease;
+    transition: transform 0.4s ease, opacity 0.4s ease;
     z-index: 10;
   }
 
@@ -771,9 +785,23 @@ border: 2px solid #495E57;
     opacity: 1;
   }
 
+  /* .menu li { */
+    /* display: flex; */
+    /* justify-content: center; */
+  /* } */
+
   .menu a {
     font-size: 1.2rem;
+    text-decoration: none;
+    color:#495e57;
+    font-weight: 700;
+    padding: 0.3rem 4rem;
   }
+
+   .menu a:hover{
+    background-color: #495E57;
+    color: white;
+   }
 
 
   .hero-container {
@@ -837,10 +865,6 @@ border: 2px solid #495E57;
    bottom: 0;
    right: 0;
  }
-/* 
-    .footer-section li {
-      font-size: 1rem;
-    } */
 
     .footer-inner-main-container {
       margin: 2rem auto -2rem;
@@ -856,14 +880,14 @@ border: 2px solid #495E57;
     position: relative;
   }
 
-  .menu.open {
+  /* .menu.open {
     transform: scaleY(1);
     opacity: 1;
-  }
+  } */
 
-  .menu a {
+  /* .menu a {
     font-size: 1.2rem;
-  }
+  } */
 
   .hero-container {
     margin: auto;
@@ -940,10 +964,10 @@ border: 2px solid #495E57;
     margin: 2rem auto 0rem;
    }
 
-   .footer-section li {
+    .footer-section li {
      font-size: 0.7rem;
      margin: 0;
-   }
+    }
      .footer-section {
       margin: 2rem 0rem 3rem 1rem;
      }
@@ -967,4 +991,10 @@ border: 2px solid #495E57;
         margin: 0;
         margin-top: 0.2rem;
       }
+}
+
+@media screen and (max-width: 350px) {
+    .footer-section li {
+      font-size: 0.3rem;
+    }
 }

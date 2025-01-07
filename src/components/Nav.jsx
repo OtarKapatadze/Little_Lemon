@@ -54,24 +54,24 @@ export default function Nav() {
       <button className="hamburger" onClick={toggleMenu}>
         <img src={menuOpen ? xmark : hamburgerSvg} alt="Hamburger Menu Icon" />
       </button>
-      {menuOpen && (
-        <ul className={`navbar-links menu ${menuOpen ? "open" : ""}`}>
-          {listItems.map((el, index) => {
-            return (
-              <li className={`list-Item-${index + 1}`} key={index}>
-                <a
-                  href="#"
-                  onClick={(e) => {
-                    e.preventDefault();
-                  }}
-                >
-                  {el}
-                </a>
-              </li>
-            );
-          })}
-        </ul>
-      )}
+      {/* {menuOpen && ( */}
+      <ul className={` menu ${menuOpen ? "open" : ""}`}>
+        {listItems.map((el, index) => {
+          return (
+            <li className={`list-Item-${index + 1}`} key={index}>
+              <a
+                href="#"
+                onClick={(e) => {
+                  e.preventDefault();
+                }}
+              >
+                {el}
+              </a>
+            </li>
+          );
+        })}
+      </ul>
+      {/* // )} */}
     </>
   );
 
