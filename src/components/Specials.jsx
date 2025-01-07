@@ -1,11 +1,31 @@
 import { SpeacialsData } from "../data";
+import { useNavigate } from "react-router-dom";
 
 export default function Specials() {
+  const navigate = useNavigate();
+
+  const handleNavigation = () => {
+    // Navigate to the online menu page
+    navigate("/menu");
+  };
+
+  const handleScrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth", // smooth scrolling effect
+    });
+  };
+
+  const twoFunctions = () => {
+    handleNavigation();
+    handleScrollToTop();
+  };
+
   return (
     <section id="Specials" className="specials-container">
       <header className="specials-header">
         <h2>This week specials!</h2>
-        <button>Online Menu</button>
+        <button onClick={twoFunctions}>Online Menu</button>
       </header>
       <main className="specials-main">
         {SpeacialsData.map((el) => {

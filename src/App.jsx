@@ -19,19 +19,31 @@ function App() {
         </Header>
         <Routes>
           <Route exact path="/" element={<Main />} />
-          <Route exact path="/Menu" element={<Menu title="Coming Soon" />} />
-          <Route exact path="/About" element={<About title="Coming Soon" />} />
+          <Route
+            exact
+            path="/Menu"
+            element={<Menu title="Menu Coming Soon" />}
+          />
+          <Route
+            exact
+            path="/About"
+            element={<About title="About Page Coming Soon" />}
+          />
           <Route
             exact
             path="/Reservation"
-            element={<Reservation title="Coming Soon" />}
+            element={<Reservation title="Online Reservation Coming Soon" />}
           />
           <Route
             exact
             path="/Order Online"
-            element={<OrderOnline title="Coming Soon" />}
+            element={<OrderOnline title="Online Orders Coming Soon" />}
           />
-          <Route exact path="/Login" element={<Login title="Coming Soon" />} />
+          <Route
+            exact
+            path="/Login"
+            element={<Login title="Login Functionality Coming Soon" />}
+          />
         </Routes>
         <Footer />
       </div>

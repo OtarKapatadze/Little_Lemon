@@ -75,7 +75,10 @@ export default function Nav() {
 
   return (
     <nav className="navbar-container">
-      <img className="navbar-item" src={logo} alt="Company Logo" />
+      <Link to={"/"}>
+        {" "}
+        <img className="navbar-item" src={logo} alt="Company Logo" />
+      </Link>
       {windowWidth >= 1025 ? navbarItems : hamburgerMenu}
     </nav>
   );
