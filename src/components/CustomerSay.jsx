@@ -10,7 +10,11 @@ export default function CustomerSay() {
         {testimonialsData.map((el) => {
           return (
             <div key={el.id} className="testimonial-card">
-              <img src={el.image} alt={`Picture of-${el.name}`} />
+              <img
+                src={el.image}
+                alt={`Picture of-${el.name}`}
+                loading="lazy"
+              />
               <h3>{el.name}</h3>
               <div className="testimonial-rating">
                 <p>⭐⭐⭐⭐⭐</p>

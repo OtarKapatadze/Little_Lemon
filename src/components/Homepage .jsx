@@ -13,6 +13,7 @@ export default function Homepage() {
         className="hero-image"
         src={homePageInfo.image}
         alt={homePageInfo.imageAlt}
+        loading="lazy"
       />
     </section>
   );

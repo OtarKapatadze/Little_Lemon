@@ -87,6 +87,10 @@ video {
   vertical-align: baseline;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 p,
 button,
 ul,
@@ -741,6 +745,18 @@ border: 2px solid #495E57;
   background-color: #f4ce14;
 }
 
+.router-section{
+  max-width: 65%;
+  margin: 2rem auto;
+  height: 600px;
+  background-color:#b9b9b9;
+  border-radius: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 5rem;
+  color: #495E57;
+}
 
 
 
@@ -991,6 +1007,13 @@ border: 2px solid #495E57;
         margin: 0;
         margin-top: 0.2rem;
       }
+
+    .router-section {
+      width: 100%;
+      font-size: 2rem;
+    }
+
+     
 }
 
 @media screen and (max-width: 350px) {

@@ -8,8 +8,16 @@ export default function Chicago() {
         <p>{chicagoData.description}</p>
       </article>
       <div className="image-container">
-        <img src={chicagoData.image1} alt="owner of Little Lemon restaurant" />
-        <img src={chicagoData.image2} alt="owner of Little Lemon restaurant" />
+        <img
+          src={chicagoData.image1}
+          alt="owner of Little Lemon restaurant"
+          loading="lazy"
+        />
+        <img
+          src={chicagoData.image2}
+          alt="owner of Little Lemon restaurant"
+          loading="lazy"
+        />
       </div>
     </section>
   );

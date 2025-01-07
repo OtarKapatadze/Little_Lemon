@@ -1,11 +1,19 @@
 import footerLogo1 from "../Assets/Asset white 20@4x.png";
+import { Link } from "react-router-dom";
 import { listForFooter } from "../data";
 
 export default function Footer() {
+  const handleScrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth", // smooth scrolling effect
+    });
+  };
+
   return (
     <footer className="footer-container">
       <section className="footer-inner-main-container">
-        <img src={footerLogo1} alt="footer Logo" />
+        <img src={footerLogo1} alt="footer Logo" loading="lazy" />
         {listForFooter.map((sec, index) => {
           if (index === 0) {
             return (
@@ -17,9 +25,13 @@ export default function Footer() {
                     } else {
                       return (
                         <li key={inx}>
-                          <a href="#" onClick={(e) => e.preventDefault()}>
+                          <Link
+                            to={item === "Home" ? "/" : `/${item}`}
+                            onClick={handleScrollToTop}
+                            className="link"
+                          >
                             {item}
-                          </a>
+                          </Link>
                         </li>
                       );
                     }
@@ -42,7 +54,7 @@ export default function Footer() {
                             href="#"
                             onClick={(e) => e.preventDefault()}
                           >
-                            <img src={el.icon} alt="el.title" />
+                            <img src={el.icon} alt="contact info" />
                             <span className="span-box">{el.content}</span>
                           </a>
                         </li>
@@ -62,13 +74,15 @@ export default function Footer() {
                     } else {
                       return (
                         <li key={inx}>
-                          <a
+                          <Link
                             className="social-media"
-                            href="#"
-                            onClick={(e) => e.preventDefault()}
+                            onClick={(e) => {
+                              e.preventDefault();
+                              window.open(`${el.link}`, "_blank");
+                            }}
                           >
                             <img src={el.icon} alt="Social Media Link" />
-                          </a>
+                          </Link>
                         </li>
                       );
                     }
@@ -81,40 +95,4 @@ export default function Footer() {
       </section>
     </footer>
   );
-}
-
-{
-  /* return (
-    <footer className="footer-container">
-      <section className="footer-inner-main-container">
-        <img src={footerLogo1} alt="footer Logo" />
-        {listForFooter.map((section, index) => {
-          return (
-            <section key={section.id} className={`footer-section`}>
-              <ul>
-                {section.listItems.map((listItem, index) => {
-                  if (index === 0) {
-                    return (
-                      <li key={index}>
-                        <b>{listItem}</b>
-                      </li>
-                    );
-                  } else {
-                    return (
-                      <li key={index}>
-                        <a href="#" onClick={(e) => e.preventDefault()}>
-                         {listItem}
-                        </a>
-                      </li>
-                    );
-                  }
-                })}
-              </ul>
-            </section>
-          );
-        })}
-      </section>
-    </footer>
-  );
-} */
 }

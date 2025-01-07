@@ -1,6 +1,7 @@
 import logo from "../Assets/Logo.jpg";
 import hamburgerSvg from "../Assets/🦆 icon _hamburger menu.svg";
 import xmark from "../Assets/closeX.svg";
+import { Link } from "react-router-dom";
 // import xmark from "../Assets/Xicon.png";
 
 import { useState, useEffect } from "react";
@@ -35,14 +36,13 @@ export default function Nav() {
       {listItems.map((el, index) => {
         return (
           <li className={`list-item-${index + 1}`} key={index}>
-            <a
-              href="#"
-              onClick={(e) => {
-                e.preventDefault();
-              }}
+            <Link
+              to={el === "Home" ? "/" : el}
+              onClick={toggleMenu}
+              className="link"
             >
               {el}
-            </a>
+            </Link>
           </li>
         );
       })}
@@ -54,24 +54,22 @@ export default function Nav() {
       <button className="hamburger" onClick={toggleMenu}>
         <img src={menuOpen ? xmark : hamburgerSvg} alt="Hamburger Menu Icon" />
       </button>
-      {/* {menuOpen && ( */}
+
       <ul className={` menu ${menuOpen ? "open" : ""}`}>
         {listItems.map((el, index) => {
           return (
             <li className={`list-Item-${index + 1}`} key={index}>
-              <a
-                href="#"
-                onClick={(e) => {
-                  e.preventDefault();
-                }}
+              <Link
+                to={el === "Home" ? "/" : el}
+                onClick={toggleMenu}
+                className="link"
               >
                 {el}
-              </a>
+              </Link>
             </li>
           );
         })}
       </ul>
-      {/* // )} */}
     </>
   );
 
