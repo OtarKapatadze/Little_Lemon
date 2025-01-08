@@ -288,7 +288,8 @@ button:hover{
   border-radius: 0.7rem;
   width: 160px;
   background-color: #f4ce14;
-  color: black;
+  /* color: black; */
+  color:#495e57;
   font-weight: bold;
   font-size: 1.1rem;
   border: 3px solid #f4ce14;
@@ -353,6 +354,7 @@ button:hover{
   border-radius: 1rem;
   background-color: #f4ce14;
   color: #495E57;
+  /* color: black; */
   border: 3px solid #f4ce14;
   font-size: 1.1rem;
   white-space: nowrap;
@@ -364,7 +366,8 @@ button:hover{
 .specials-header button:hover {
   background-color: #ffffff;
   border-color: #f4ce14;
-  color: #495E57;
+  /* color: #495E57; */
+  color:#f4ce14;
   cursor: pointer;
   font-weight: 900;
 }
@@ -748,16 +751,80 @@ border: 2px solid #495E57;
 .router-section{
   max-width: 65%;
   margin: 2rem auto;
-  height: 600px;
-  background-color:#b9b9b9;
+  min-height: 500px;
+  background-color:#495E57;
   border-radius: 1rem;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 2.5rem;
-  color: #495E57;
+  color: white;
 }
 
+ .router-reservation form {
+   width: 60%;
+   max-width: 60%;
+   min-width: 240px;
+   display: flex;
+   flex-direction: column;
+   /* text-align: center; */
+ }
+
+ .router-reservation form >*{
+  margin: 0.5rem 1rem;
+  font-family: Papyrus,Karla,sans-serif;
+  font-weight: 900;
+ }
+
+
+ .router-reservation form input,
+ .router-reservation form select {
+  padding: 0.3rem 1rem;
+  font-size: 1.5rem;
+  border-radius: 0.3rem;
+  border: none;
+  color: #495E57;
+  font-weight: 700;
+ }
+
+ .router-reservation .button {
+    font-family: Papyrus,Karla,sans-serif;
+    padding: 0.3rem 1rem;
+    border-radius: 0.7rem;
+    background-color: #f4ce14;
+    color: #495e57;
+    font-weight: 900;
+    border: 3px solid #f4ce14;
+    white-space: nowrap;
+    margin: 1rem 1rem;
+    transition: transform 0.5s ease;
+ }
+
+ .router-reservation .button:hover {
+    background-color: #495e57;
+    border-color: #f4ce14;
+    color: #f4ce14;
+    cursor: pointer;
+    box-shadow: 0px 0px 17px -8px rgb(244, 206, 20);
+    text-shadow: 0px 0px 10px rgba(244, 206, 20, 0.96);
+    transform: scale(1.05);
+ }
+
+ .router-reservation .button:active {
+    background-color: #f4ce14;
+    color: white;
+ }
+
+@media screen and (min-width: 1450px){
+
+  .router-reservation{
+    width: 50%;
+  }
+ .router-reservation form {
+  width: 50%;
+}
+
+}
 
 
 @media screen and (max-width: 1260px){
@@ -889,8 +956,21 @@ border: 2px solid #495E57;
     .footer-inner-main-container {
       margin: 2rem auto -2rem;
     }
-
+   
+ .router-section{
+  /* width: 90%; */
+  max-width: 90%;
+  margin: 2rem auto;
+ }
+ .router-reservation form {
+  width: 90%;
+  /* height: 100svh; */
+ }
  
+ .router-section >* {
+  font-size: 1.5rem;
+ }
+
 }
 
 
