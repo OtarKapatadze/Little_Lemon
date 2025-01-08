@@ -29,11 +29,7 @@ function App() {
             path="/About"
             element={<About title="About Page Coming Soon" />}
           />
-          <Route
-            exact
-            path="/Reservation"
-            element={<Reservation title="Online Reservation Coming Soon" />}
-          />
+          <Route exact path="/Reservation" element={<Reservation />} />
           <Route
             exact
             path="/Order Online"
