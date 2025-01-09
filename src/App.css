@@ -384,18 +384,14 @@ button:hover{
   margin-top: 2rem;
   max-width: 100%;
   display: flex;
-  column-gap: 10px;
-  row-gap: 20px;
-  padding: 0rem 2rem;
   flex-wrap: wrap;
-  /* margin: auto; */
   justify-content: center;
 }
 
 .specials-card {
   border-radius: 1rem;
   margin: 0.5rem;
-  max-width: 350px;
+  max-width: 340px;
   background-color: #f1f1f1;
   padding: 1rem;
   box-shadow: 0px 2px 5px 4px rgba(196, 184, 184, 0.7);
@@ -409,7 +405,7 @@ button:hover{
 }
 
 .specials-card {
-  flex: 1 320px;
+  flex: 1 280px;
 }
 
 .specials-card img {
@@ -500,8 +496,6 @@ button:hover{
 .testimonials-header h2 {
   font-family: Papyrus, Markazi, sans-serif;
   font-weight: 900;
-  /* color: #f1f1f1; */
-  /* text-shadow: 4px 8px 7px rgba(224, 224, 224, 0.2); */
 }
 
 .testimonials-main {
@@ -519,7 +513,7 @@ button:hover{
   display: flex;
   flex-direction: column;
   border-radius: 1rem;
-  max-width: 350px;
+  max-width: 320px;
   box-shadow: 0px 2px 23px -4px rgba(0, 0, 0, 0.7);
   -webkit-box-shadow: 0px 2px 23px -4px rgba(0, 0, 0, 0.7);
   -moz-box-shadow: 0px 2px 23px -4px rgba(0, 0, 0, 0.7);
@@ -639,9 +633,10 @@ button:hover{
 }
 
 .footer-inner-main-container >img {
-  max-width: 15rem;
-  min-width: 240px;
-  margin: 5rem 3rem;
+  /* max-width: 15rem; */
+  /* min-width: 200px; */
+  max-width: 150px;
+  margin: 5rem 1rem;
 }
 
 .footer-inner-main-container >*{
@@ -660,8 +655,8 @@ button:hover{
 .footer-section li {
   list-style: none;
   white-space: nowrap;
-  min-width: 220px;
-  /* max-width: 300px; */
+  /* min-width: 220px; */
+  max-width: 200px;
   font-size: 1rem;
   /* padding: 0rem 0rem; */
   color: #f1f1f1;
@@ -669,9 +664,9 @@ button:hover{
   /* padding: 0rem 1rem; */
 }
 
-/* .foorter-section li:nth-of-type(1){ */
- /* margin-bottom: 1rem; */
-/* } */
+.footer-section:nth-of-type(2) li {
+  width: 100%;
+}
 
 .footer-section a {
   text-decoration: none;
@@ -679,17 +674,21 @@ button:hover{
 }
 
 .footer-section:nth-of-type(1){
+  margin: 5rem auto;
+  margin-left: 2rem;
   order:1;
-  flex: 0 1;
 }
+
+.footer-section:nth-of-type(1) li {
+  margin-left: 0.5rem;
+  padding-top: 0.2rem;
+}
+
 .footer-section:nth-of-type(2){
   order:3;
-  flex:3;
-  /* display: flex; */
  }
 .footer-section:nth-of-type(3){
   order: 2;
-  flex:0;
 }
 
 .footer-container {
@@ -702,10 +701,9 @@ button:hover{
 }
 
 .footer-section img{
-  max-width: 40px;
-  max-height: 40px;
+  max-width: 30px;
+  max-height: 30px;
   padding: 0.5rem;
-  /* background-color:white; */
 }
 
 .contact-us img {
@@ -715,9 +713,7 @@ button:hover{
 
 .footer-section a {
   display: flex;
-  /* justify-content: center; */
   align-items: center;
-  /* background-color: ; */
 }
 
 .span-box {
@@ -725,8 +721,8 @@ button:hover{
 }
 
 .social-media img{
-max-width: 40px;
-min-height: 40px;
+max-width: 30px;
+min-height:30px;
 background-color: #e0e0e0;
 border: 2px solid #495E57;
 }
@@ -734,12 +730,9 @@ border: 2px solid #495E57;
 .footer-section:nth-of-type(3) ul {
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
-  /* align-items: ; */
 }
 
 .footer-section a:hover{
- /* background-color: #f1f1f1; */
  color:#f4ce14;
  scale: 1.01;
 }
@@ -855,9 +848,12 @@ border: 2px solid #495E57;
    .router-section {
      font-size: 2rem;
    }
-  /* .footer-section li { */
-    /* font-size: 1rem; */
-  /* } */
+
+   .testimonial-card {
+    flex: 1 1 280px;
+    max-width: 300px;
+   }
+
 }
 
 
@@ -1001,15 +997,6 @@ border: 2px solid #495E57;
     position: relative;
   }
 
-  /* .menu.open {
-    transform: scaleY(1);
-    opacity: 1;
-  } */
-
-  /* .menu a {
-    font-size: 1.2rem;
-  } */
-
   .hero-container {
     margin: auto;
     display: flex;
@@ -1068,6 +1055,10 @@ border: 2px solid #495E57;
     margin: 0rem 1rem;
   }
 
+  .specials-card {
+    max-width: 310px;
+  }
+
   .testimonials-header h2 {
     font-size: 2rem;
   }
@@ -1089,19 +1080,19 @@ border: 2px solid #495E57;
      font-size: 0.7rem;
      margin: 0;
     }
+
+    .footer-section:nth-of-type(1) li {
+      font-size: 1rem;
+    }
+
+    .footer-section:nth-of-type(1) {
+      margin: 2rem 0rem 3rem 1rem;
+    }
+
      .footer-section {
       margin: 2rem 0rem 3rem 1rem;
      }
 
-    .footer-section:nth-of-type(1){
-      order: 3;
-     }
-     .footer-section:nth-of-type(2) {
-      order: 1;
-     }
-     .footer-section:nth-of-type(3) {
-      order:2;
-     }
 
       .contact-us img {
         margin: 0;
@@ -1118,7 +1109,7 @@ border: 2px solid #495E57;
       font-size: 2rem;
     }
 
-     
+
 }
 
 @media screen and (max-width: 350px) {

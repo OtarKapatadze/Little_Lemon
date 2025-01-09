@@ -61,7 +61,7 @@ const listForFooter = [
   {
     id: 3,
     listItems: [
-      {title: "FIND US IN SOCIAL MEDIA"},
+      {title: "SOCIAL MEDIA LINKS"},
       {
         icon:facebookIcon,
         link: "https://www.facebook.com/"
