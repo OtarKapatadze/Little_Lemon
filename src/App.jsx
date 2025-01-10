@@ -20,11 +20,11 @@ function App() {
         </Header>
         <Routes>
           <Route exact path="/" element={<Main />} />
-          <Route
+          {/* <Route
             exact
             path="/Menu"
             element={<Menu title="Menu Coming Soon" />}
-          />
+          /> */}
           <Route
             exact
             path="/About"

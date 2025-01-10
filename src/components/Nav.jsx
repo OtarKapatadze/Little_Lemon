@@ -8,7 +8,7 @@ import { useState, useEffect } from "react";
 const listItems = [
   "Home",
   "About",
-  "Menu",
+  // "Menu",
   "Reservation",
   "Order Online",
   "Login",

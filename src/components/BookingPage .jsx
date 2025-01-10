@@ -8,7 +8,7 @@ export default function BookingPage({ title = "Reserve a Table", children }) {
     date: "",
     time: "",
     guests: 1,
-    occasion: "",
+    occasion: "Friends",
     email: "",
   });
 
