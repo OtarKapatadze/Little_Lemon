@@ -127,6 +127,15 @@ input[type="date"]::-webkit-calendar-picker-indicator:hover {
   cursor: pointer;
 }
 
+.select:hover {
+  cursor: pointer;
+}
+
+.select .option:hover{
+  cursor: pointer;
+  background-color: #f4ce14;
+}
+
 .app-container {
   width: 100%;
   margin: 20px auto;

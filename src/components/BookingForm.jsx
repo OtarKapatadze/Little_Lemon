@@ -1,32 +1,75 @@
-export default function BookingForm({ children }) {
+import { data } from "react-router-dom";
+import AvailableTimes from "./AvailableTimes";
+
+export default function BookingForm({ formData, setFormData, children }) {
+  const handleChange = (e) => {
+    const { id, value } = e.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [id]: value,
+    }));
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log("Form Submitted", formData);
+  };
+
   return (
     <>
       {children}
-      <form>
+      <form onSubmit={handleSubmit}>
         <label htmlFor="res-date" className="label">
           Choose date
         </label>
-        <input type="date" id="res-date" />
-        <label htmlFor="res-time" className="label">
-          Choose time
-        </label>
-        <input type="time" id="res-time" min="09:00" max="18:00" required />
+        <input
+          value={formData.date}
+          onChange={handleChange}
+          type="date"
+          id="res-date"
+        />
+        <AvailableTimes />
         <label htmlFor="guests" className="label">
           Number of guests
         </label>
-        <input type="number" placeholder="1" min="1" max="10" id="guests" />
+        <input
+          value={formData.guests}
+          onChange={handleChange}
+          type="number"
+          placeholder="1"
+          min="1"
+          max="10"
+          id="guests"
+        />
         <label htmlFor="occasion" className="label">
           Occasion
         </label>
-        <select id="occasion">
-          <option value={"Birthday"}>Birthday</option>
-          <option value={"Anniversary"}>Anniversary</option>
-          <option value={"Friends"}>Friends</option>
+        <select
+          value={formData.occasion}
+          onChange={handleChange}
+          id="occasion"
+          className="select select-occasion"
+        >
+          <option className="option" value={"Birthday"}>
+            Birthday
+          </option>
+          <option className="option" value={"Anniversary"}>
+            Anniversary
+          </option>
+          <option className="option" value={"Friends"}>
+            Friends
+          </option>
         </select>
         <label htmlFor="email" className="label">
           Email
         </label>
-        <input type="email" placeholder="....@mail.com" name="" id="email" />
+        <input
+          value={formData.email}
+          onChange={handleChange}
+          type="email"
+          placeholder="....@mail.com"
+          id="email"
+        />
         <input className="button" type="submit" value="SUBMIT" />
       </form>
     </>
