@@ -28,6 +28,13 @@ export default function Nav() {
     };
   }, []);
 
+  const handleScrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth", // smooth scrolling effect
+    });
+  };
+
   // Toggle Humburger menu
   const toggleMenu = () => setMenuOpen((prev) => !prev);
 
@@ -75,7 +82,7 @@ export default function Nav() {
 
   return (
     <nav className="navbar-container">
-      <Link to={"/"}>
+      <Link to={"/"} onClick={handleScrollToTop}>
         {" "}
         <img className="navbar-item" src={logo} alt="Company Logo" />
       </Link>

@@ -5,7 +5,8 @@ import Footer from "./components/Footer";
 import Main from "./components/Main";
 import Nav from "./components/Nav";
 import Menu from "./components/Menu";
-import Reservation from "./components/Reservation";
+// import Reservation from "./components/Reservation";
+import BookingPage from "./components/BookingPage ";
 import About from "./components/About";
 import OrderOnline from "./components/OrderOnline";
 import Login from "./components/Login";
@@ -29,7 +30,7 @@ function App() {
             path="/About"
             element={<About title="About Page Coming Soon" />}
           />
-          <Route exact path="/Reservation" element={<Reservation />} />
+          <Route exact path="/Reservation" element={<BookingPage />} />
           <Route
             exact
             path="/Order Online"
