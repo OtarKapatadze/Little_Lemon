@@ -1,7 +1,5 @@
 import BookingForm from "./BookingForm";
 import { useState } from "react";
-// import { Formik } from "formik";
-// import { object, string, number, date, InferType } from "yup";
 
 export default function BookingPage({ title = "Reserve a Table", children }) {
   const [formData, setFormData] = useState({
