@@ -2,6 +2,7 @@ import { data } from "react-router-dom";
 import AvailableTimes from "./AvailableTimes";
 
 export default function BookingForm({ formData, setFormData, children }) {
+  // event handler for state
   const handleChange = (e) => {
     const { id, value } = e.target;
     setFormData((prevData) => ({
@@ -19,16 +20,16 @@ export default function BookingForm({ formData, setFormData, children }) {
     <>
       {children}
       <form onSubmit={handleSubmit}>
-        <label htmlFor="res-date" className="label">
+        <label htmlFor="date" className="label">
           Choose date
         </label>
         <input
           value={formData.date}
           onChange={handleChange}
           type="date"
-          id="res-date"
+          id="date"
         />
-        <AvailableTimes />
+        <AvailableTimes formData={formData} changeHandler={handleChange} />
         <label htmlFor="guests" className="label">
           Number of guests
         </label>

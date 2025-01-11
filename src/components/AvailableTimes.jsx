@@ -1,7 +1,7 @@
 import { useState } from "react";
 
-export default function AvailableTimes() {
-  const [availableTimes] = useState([
+export default function AvailableTimes({ formData, changeHandler }) {
+  const [availableTimes, setAvailableTime] = useState([
     "17:00",
     "18:00",
     "19:00",
@@ -10,18 +10,16 @@ export default function AvailableTimes() {
     "22:00",
   ]);
 
-  const [selectedTime, setSelectedTime] = useState("");
-
   return (
     <>
-      <label htmlFor="res-time" className="label">
+      <label htmlFor="time" className="label">
         Choose time
       </label>
       <select
-        id="res-time"
-        value={selectedTime}
+        id="time"
+        value={formData.time}
         className="select select-time"
-        onChange={(e) => setSelectedTime(e.target.value)}
+        onChange={changeHandler}
       >
         {availableTimes.map((opt, inx) => {
           return (
