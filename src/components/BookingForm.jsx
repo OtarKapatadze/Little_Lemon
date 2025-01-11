@@ -1,7 +1,13 @@
-import { data } from "react-router-dom";
+// import { data } from "react-router-dom";
 import AvailableTimes from "./AvailableTimes";
 
-export default function BookingForm({ formData, setFormData, children }) {
+export default function BookingForm({
+  availableTimes,
+  setAvailableTime,
+  formData,
+  setFormData,
+  children,
+}) {
   // event handler for state
   const handleChange = (e) => {
     const { id, value } = e.target;
@@ -14,6 +20,9 @@ export default function BookingForm({ formData, setFormData, children }) {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("Form Submitted", formData);
+    setAvailableTime((prevData) => {
+      return [...prevData].filter((el) => el !== formData.time);
+    });
   };
 
   return (
@@ -29,7 +38,11 @@ export default function BookingForm({ formData, setFormData, children }) {
           type="date"
           id="date"
         />
-        <AvailableTimes formData={formData} changeHandler={handleChange} />
+        <AvailableTimes
+          availableTimes={availableTimes}
+          formData={formData}
+          changeHandler={handleChange}
+        />
         <label htmlFor="guests" className="label">
           Number of guests
         </label>

@@ -10,10 +10,24 @@ export default function BookingPage({ title = "Reserve a Table", children }) {
     email: "",
   });
 
+  const [availableTimes, setAvailableTime] = useState([
+    "17:00",
+    "18:00",
+    "19:00",
+    "20:00",
+    "21:00",
+    "22:00",
+  ]);
+
   return (
     <section className="router-section router-reservation">
       <h1>{title}</h1>
-      <BookingForm formData={formData} setFormData={setFormData} />
+      <BookingForm
+        setAvailableTime={setAvailableTime}
+        availableTimes={availableTimes}
+        formData={formData}
+        setFormData={setFormData}
+      />
       {children}
     </section>
   );
