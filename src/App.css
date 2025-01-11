@@ -175,21 +175,12 @@ input[type="date"]::-webkit-calendar-picker-indicator:hover {
   transform: scale(1.1);
 }
 
-/* .navbar-item:nth-of-type(1) {
-  flex: 1;
-}
-
-.navbar-item:nth-of-type(2) {
-  flex: 2;
-} */
-
 .navbar-links {
   list-style: none;
   display: flex;
   justify-content: end;
   text-align: right;
   padding: 0rem 1rem 1.5rem 0rem;
-  /* added margin later*/
   margin-left: auto
 }
 
@@ -1171,4 +1162,21 @@ border: 2px solid #495E57;
     .footer-section li {
       font-size: 0.3rem;
     }
+
+    .navbar-container img {
+      max-width: 100px;
+      max-height: 56px;
+    }
+
+    .hero-description h1{
+      font-size: 1.5rem;
+    }
+    .hero-description h2 {
+      font-size: 1rem;
+  }
+  
+  .specials-header h2{
+    font-size: 1.5rem;
+  }
+
 }
