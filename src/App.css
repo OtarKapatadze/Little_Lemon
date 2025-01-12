@@ -873,7 +873,28 @@ input[type="date"]::-webkit-calendar-picker-indicator:hover {
   font-size: 1rem;
 }
 
+.error {
+  color: red;
+}
 
+.router-Confirmation{
+  background-color:green;
+  color:#f4ce14;
+  font-family: Papyrus;
+}
+
+.router-Confirmation h2{
+  font-family: Papyrus;
+  font-weight: 900;
+  font-size: 6rem;
+  white-space: inherit;
+  text-align: center;
+}
+
+.linkforhome {
+  font-family: Markazi;
+  color: white;
+}
 
 @media screen and (min-width: 1450px) {
 
@@ -1038,6 +1059,11 @@ input[type="date"]::-webkit-calendar-picker-indicator:hover {
 
 }
 
+.router-Confirmation h2 {
+  font-size: 4rem;
+}
+
+
 
 @media screen and (max-width: 768px) {
 
@@ -1157,6 +1183,10 @@ input[type="date"]::-webkit-calendar-picker-indicator:hover {
     width: 100%;
     font-size: 2rem;
   }
+
+    .router-Confirmation h2 {
+      font-size: 1rem;
+    }
 
 
 }
