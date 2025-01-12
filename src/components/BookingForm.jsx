@@ -2,6 +2,8 @@ import AvailableTimes from "./AvailableTimes";
 import { useEffect, useState } from "react";
 import { fetchAPI, submitAPI } from "../api";
 import { useNavigate } from "react-router";
+// import { object, string, number, date, InferType } from "yup";
+// import { Formik } from "formik";
 
 export default function BookingForm({
   formData,
