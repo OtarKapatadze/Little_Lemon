@@ -2,7 +2,7 @@ import Specials from "./Specials";
 import Homepage from "./Homepage ";
 import CustomerSay from "./CustomerSay";
 import Chicago from "./Chicago";
-import { listForMain } from "../data";
+// import { listForMain } from "../data";
 
 export default function Main({ children }) {
   return (
