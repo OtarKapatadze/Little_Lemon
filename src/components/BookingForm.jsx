@@ -1,6 +1,7 @@
 import AvailableTimes from "./AvailableTimes";
 import { useEffect, useState } from "react";
 import { fetchAPI, submitAPI } from "../api";
+import { useNavigate } from "react-router";
 
 export default function BookingForm({
   formData,
@@ -9,12 +10,29 @@ export default function BookingForm({
   availableTimes,
 }) {
   const [resetTimes, setResetTimes] = useState(availableTimes);
+  const [isSubmited, setIsSubmitted] = useState(false);
+  const navigate = useNavigate();
 
+  // useEffect for resetTImes
   useEffect(() => {
     const today = new Date();
     const todaysAvailability = fetchAPI(today);
     setResetTimes(todaysAvailability);
   }, []);
+
+  // useEffect for submission
+
+  useEffect(() => {
+    if (isSubmited) {
+      const submited = submitAPI(formData);
+      if (submited) {
+        navigate("/ConfirmedBooking");
+      }
+    }
+
+    setIsSubmitted(false);
+    // console.log(isSubmited);
+  }, [isSubmited]);
 
   // handleChange updated formData changes
   function handleChange(e) {
@@ -48,6 +66,8 @@ export default function BookingForm({
       occasion: "",
       email: "",
     });
+
+    setIsSubmitted(!isSubmited);
   }
 
   return (
