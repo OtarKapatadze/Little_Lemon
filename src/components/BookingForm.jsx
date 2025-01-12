@@ -1,19 +1,26 @@
 import AvailableTimes from "./AvailableTimes";
+import { useEffect, useState } from "react";
+import { fetchAPI, submitAPI } from "../api";
 
 export default function BookingForm({
   formData,
   setFormData,
   dispatch,
   availableTimes,
-  newDates,
 }) {
-  // const newDate = newDates();
+  const [resetTimes, setResetTimes] = useState(availableTimes);
+
+  useEffect(() => {
+    const today = new Date();
+    const todaysAvailability = fetchAPI(today);
+    setResetTimes(todaysAvailability);
+  }, []);
 
   // handleChange updated formData changes
   function handleChange(e) {
     const { id, value } = e.target;
     if (id === "date") {
-      dispatch({ type: "initialize_times", payload: availableTimes });
+      dispatch({ type: "initialize_times", payload: resetTimes });
       setFormData((prev) => ({ ...prev, [id]: value }));
     } else {
       setFormData((prevData) => {
@@ -32,7 +39,6 @@ export default function BookingForm({
     e.preventDefault();
     console.log(formData);
     dispatch({ type: "available_times", payload: formData.time });
-
     // Optionally reset the form data
 
     setFormData({

@@ -1,6 +1,6 @@
 import BookingForm from "./BookingForm";
 import { useReducer, useState, useEffect } from "react";
-import { fetchAPI, submitAPI } from "../api";
+import { fetchAPI } from "../api";
 
 const initialTimeArray = [];
 
@@ -46,7 +46,6 @@ export default function BookingPage({ title = "Reserve a Table", children }) {
         setFormData={setFormData}
         availableTimes={availableTimes}
         dispatch={dispatch}
-        // newDated={todayDates}
       />
       {children}
     </section>
