@@ -5,12 +5,15 @@ export default function BookingForm({
   setFormData,
   dispatch,
   availableTimes,
+  newDates,
 }) {
+  // const newDate = newDates();
+
   // handleChange updated formData changes
   function handleChange(e) {
     const { id, value } = e.target;
     if (id === "date") {
-      dispatch({ type: "initialize_times" });
+      dispatch({ type: "initialize_times", payload: availableTimes });
       setFormData((prev) => ({ ...prev, [id]: value }));
     } else {
       setFormData((prevData) => {
@@ -79,6 +82,9 @@ export default function BookingForm({
           id="occasion"
           className="select select-occasion"
         >
+          <option className="option" value="What Occasion">
+            What Occasion ?
+          </option>
           <option className="option" value={"Birthday"}>
             Birthday
           </option>

@@ -1,12 +1,13 @@
 import BookingForm from "./BookingForm";
-import { useReducer, useState } from "react";
+import { useReducer, useState, useEffect } from "react";
+import { fetchAPI, submitAPI } from "../api";
 
-const initialTimeArray = ["17:00", "18:00", "19:00", "20:00", "21:00", "22:00"];
+const initialTimeArray = [];
 
 function timeReducer(timeState, action) {
   switch (action.type) {
     case "initialize_times":
-      return [...initialTimeArray];
+      return action.payload;
     case "available_times":
       return timeState.filter((time) => time !== action.payload);
     default:
@@ -29,6 +30,14 @@ export default function BookingPage({ title = "Reserve a Table", children }) {
   // useReducer state
   const [availableTimes, dispatch] = useReducer(timeReducer, initialTimeArray);
 
+  // function to call API
+
+  useEffect(() => {
+    const today = new Date();
+    const todaysAvailability = fetchAPI(today);
+    dispatch({ type: "initialize_times", payload: todaysAvailability });
+  }, []);
+
   return (
     <section className="router-section router-reservation">
       <h1>{title}</h1>
@@ -37,6 +46,7 @@ export default function BookingPage({ title = "Reserve a Table", children }) {
         setFormData={setFormData}
         availableTimes={availableTimes}
         dispatch={dispatch}
+        // newDated={todayDates}
       />
       {children}
     </section>

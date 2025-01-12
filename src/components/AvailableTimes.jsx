@@ -10,7 +10,7 @@ export default function AvailableTimes({ availableTimes, time, handleChange }) {
         value={time}
         className="select select-time"
       >
-        <option value="--">-----</option>
+        <option value="-----">-----</option>
         {availableTimes.length === 0 ? (
           <option value={"Sorry All Booked"}> Sorry All Booked </option>
         ) : (
