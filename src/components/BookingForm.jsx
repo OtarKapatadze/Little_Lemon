@@ -1,4 +1,3 @@
-import AvailableTimes from "./AvailableTimes";
 import { useEffect, useState } from "react";
 import { fetchAPI, submitAPI } from "../api";
 import { useNavigate } from "react-router";
