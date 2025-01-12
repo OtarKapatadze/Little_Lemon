@@ -1,42 +1,48 @@
-// import { data } from "react-router-dom";
 import AvailableTimes from "./AvailableTimes";
 
 export default function BookingForm({
-  availableTimes,
-  setAvailableTime,
   formData,
   setFormData,
-  children,
+  dispatch,
+  availableTimes,
 }) {
-  // event handler for state
-  const handleChange = (e) => {
+  // handleChange updated formData changes
+  function handleChange(e) {
     const { id, value } = e.target;
     if (id === "date") {
-      setFormData((prevDate) => {
+      dispatch({ type: "initialize_times" });
+      setFormData((prev) => ({ ...prev, [id]: value }));
+    } else {
+      setFormData((prevData) => {
         return {
-          ...prevDate,
-          date: value,
+          ...prevData,
+          [id]: value,
         };
       });
-      setAvailableTime({ type: "update_times" });
-    } else {
-      setFormData((prevData) => ({
-        ...prevData,
-        [id]: value,
-      }));
     }
-    console.log(id, value);
-  };
+  }
 
-  const handleSubmit = (e) => {
+  // Submit Handler
+
+  // i need to make submit so that once submitted in reducer changes initial value
+  function handleSubmit(e) {
     e.preventDefault();
-    console.log("Form Submitted", formData);
-    setAvailableTime({ type: "time_change", time: formData.time });
-  };
+    console.log(formData);
+    dispatch({ type: "available_times", payload: formData.time });
+
+    // Optionally reset the form data
+
+    setFormData({
+      date: "",
+      time: "",
+      guests: "",
+      occasion: "",
+      email: "",
+    });
+  }
 
   return (
     <>
-      {children}
       <form onSubmit={handleSubmit}>
         <label htmlFor="date" className="label">
           Choose date
@@ -48,9 +54,9 @@ export default function BookingForm({
           id="date"
         />
         <AvailableTimes
+          time={formData.time}
+          handleChange={handleChange}
           availableTimes={availableTimes}
-          formData={formData}
-          changeHandler={handleChange}
         />
         <label htmlFor="guests" className="label">
           Number of guests

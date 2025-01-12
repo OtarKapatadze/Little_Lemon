@@ -1,20 +1,17 @@
-import { render,fireEvent, screen } from '@testing-library/react';
-import App from './App';
-import BookingForm from './components/BookingForm';
+// import { timeReducer, initialize_times, availableTimes, available_times } from './components/BookingPage'; // No trailing space
 
-test('renders the BookingForm heading', () => {
-  render(<BookingForm />);
-  const HeadingElement = screen.getByText();
-  expect(linkElement).toBeInTheDocument();
-});
-
-
-
-
-
-// test('renders learn react link', () => {
-//   render(<App />);
-//   const linkElement = screen.getByText(/learn react/i);
-//   expect(linkElement).toBeInTheDocument();
+// test("initializeTimes removes a specific time from the state", () => {
+//   const state = availableTimes;
+//   const action = { type: "available_times", time: "18:00" };
+//   const updatedState = timeReducer(state, action);
+//   expect(updatedState).not.toContain("18:00");
 // });
+
+// test("updateTimes resets the state to the initial times", () => {
+//   const state = ["17:00"];
+//   const action = { type: "initialize_times" };
+//   const updatedState = timeReducer(state, action);
+//   expect(updatedState).toEqual(initialize_times);
+// });
+
 

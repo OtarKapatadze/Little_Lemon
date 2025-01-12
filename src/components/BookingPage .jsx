@@ -1,39 +1,42 @@
 import BookingForm from "./BookingForm";
 import { useReducer, useState } from "react";
 
-const initialTimes = ["17:00", "18:00", "19:00", "20:00", "21:00", "22:00"];
+const initialTimeArray = ["17:00", "18:00", "19:00", "20:00", "21:00", "22:00"];
 
-function timeReducer(state, action) {
+function timeReducer(timeState, action) {
   switch (action.type) {
-    case "time_change":
-      return [...state].filter((time) => time !== action.time);
-    case "update_times":
-      // resseting time when changed date
-      return initialTimes;
+    case "initialize_times":
+      return [...initialTimeArray];
+    case "available_times":
+      return timeState.filter((time) => time !== action.payload);
     default:
-      return state;
+      throw new Error("Reducer not working");
   }
 }
 
-export default function BookingPage({ title = "Reserve a Table", children }) {
-  const [formData, setFormData] = useState({
-    date: "",
-    time: "",
-    guests: 1,
-    occasion: "Friends",
-    email: "",
-  });
+const initialFormState = {
+  date: "",
+  time: "",
+  guests: "1",
+  occasion: "",
+  email: "",
+};
 
-  const [times, dispatch] = useReducer(timeReducer, initialTimes);
+export default function BookingPage({ title = "Reserve a Table", children }) {
+  //state for form
+  const [formData, setFormData] = useState(initialFormState);
+
+  // useReducer state
+  const [availableTimes, dispatch] = useReducer(timeReducer, initialTimeArray);
 
   return (
     <section className="router-section router-reservation">
       <h1>{title}</h1>
       <BookingForm
-        setAvailableTime={dispatch}
-        availableTimes={times}
         formData={formData}
         setFormData={setFormData}
+        availableTimes={availableTimes}
+        dispatch={dispatch}
       />
       {children}
     </section>

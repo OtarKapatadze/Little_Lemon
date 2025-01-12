@@ -1,5 +1,10 @@
 import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+const routerOptions = {
+  future: {
+    v7_startTransition: true, // Enable the future flag
+  },
+};
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Nav from "./components/Nav";
@@ -13,7 +18,7 @@ import Login from "./components/Login";
 
 function App() {
   return (
-    <Router>
+    <Router future={routerOptions}>
       <div className="app-container">
         <Header>
           <Nav />
