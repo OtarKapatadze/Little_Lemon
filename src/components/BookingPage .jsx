@@ -7,6 +7,9 @@ function timeReducer(state, action) {
   switch (action.type) {
     case "time_change":
       return [...state].filter((time) => time !== action.time);
+    case "update_times":
+      // resseting time when changed date
+      return initialTimes;
     default:
       return state;
   }

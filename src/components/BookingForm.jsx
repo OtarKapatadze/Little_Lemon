@@ -11,10 +11,20 @@ export default function BookingForm({
   // event handler for state
   const handleChange = (e) => {
     const { id, value } = e.target;
-    setFormData((prevData) => ({
-      ...prevData,
-      [id]: value,
-    }));
+    if (id === "date") {
+      setFormData((prevDate) => {
+        return {
+          ...prevDate,
+          date: value,
+        };
+      });
+      setAvailableTime({ type: "update_times" });
+    } else {
+      setFormData((prevData) => ({
+        ...prevData,
+        [id]: value,
+      }));
+    }
     console.log(id, value);
   };
 
