@@ -83,6 +83,8 @@ export default function BookingForm({
             type="date"
             id="date"
             name="date"
+            aria-label="Choose a date for your booking"
+            aria-required="true"
           />
           {touched.date && errors.date && (
             <div className="error">{errors.date}</div>
@@ -99,6 +101,8 @@ export default function BookingForm({
             name="time"
             id="time"
             className="select"
+            aria-label="Choose a time for your booking"
+            aria-required="true"
           >
             <option value="">Select Time</option>
             {availableTimes.map((time, index) => (
@@ -124,6 +128,8 @@ export default function BookingForm({
             max="10"
             id="guests"
             name="guests"
+            aria-label="Enter the number of guests"
+            aria-required="true"
           />
           {touched.guests && errors.guests && (
             <div className="error">{errors.guests}</div>
@@ -137,9 +143,11 @@ export default function BookingForm({
             name="occasion"
             id="occasion"
             className="select select-occasion"
+            aria-label="Select the occasion for your booking"
+            aria-required="true"
           >
-            <option className="option" value="What Occasion">
-              What Occasion ?
+            <option className="option" value="">
+              What Occasion?
             </option>
             <option className="option" value="Birthday">
               Birthday
@@ -166,12 +174,23 @@ export default function BookingForm({
             placeholder="....@mail.com"
             id="email"
             name="email"
+            aria-label="Enter your email address"
+            aria-required="true"
+            aria-describedby="emailHelp"
           />
+          <small id="emailHelp">
+            We'll never share your email with anyone else.
+          </small>
           {touched.email && errors.email && (
             <div className="error">{errors.email}</div>
           )}
 
-          <input className="button" type="submit" value="SUBMIT" />
+          <input
+            className="button"
+            type="submit"
+            value="SUBMIT"
+            aria-label="Submit the booking form"
+          />
         </Form>
       )}
     </Formik>
